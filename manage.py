@@ -33,4 +33,5 @@ def gerar_senha(tamanho):
 tamanho = int(input("Digite o tamanho da senha: "))
     
 senha = gerar_senha(tamanho)
-print(senha)
+with open("passwords.txt", "a") as file:
+    file.write(f"Password: {senha}, \n")
